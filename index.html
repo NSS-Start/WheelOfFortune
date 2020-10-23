@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Happy New Year !</title>
+        <script src='javascript/winwheel/Winwheel.js'></script>
+        <script src='javascript/TweenMax.min.js'></script>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="Text">
+                <p class="ready">Pr&ecirc;t pour 2021 ?</p>
+                <p class="subtitle">N&eacute;o-Soft vous lit l'avenir.</p>
+                <a href="#" onClick="startSpin();" class="spin_button">Tourner la roue</a>
+            </div>
+            <div class="Wheel">
+                <table>
+                    <td width="884" height="550" class="example_wheel_of_fortune" align="center" valign="center">
+                        <canvas id="canvas" width="880" height="440"
+                            data-responsiveMinWidth="180"
+                            data-responsiveScaleHeight="true"   /* Optional Parameters */
+                            data-responsiveMargin="50"
+                            onClick="startSpin();">
+                        </canvas>
+                    </td>
+                </table>
+            </div>
+          </div>
+        
+        <script>
+            // The responisve parameter is the only difference needed to make a wheel responsive.
+            let theWheel = new Winwheel({
+                'numSegments'  : 8,
+                'textFontSize' : 28,
+                'responsive'   : true,  // This wheel is responsive!
+                'drawText'          : false,
+                'textOrientation'   : 'curved',
+                'textAlignment'     : 'inner',
+                'textMargin'        : 90,
+                'textFontFamily'    : 'monospace',
+                'textStrokeStyle'   : 'black',
+                'textLineWidth'     : 3,
+                'textFillStyle'     : 'white',
+                'drawMode'          : 'segmentImage',
+                'segments'     :
+                [
+                    {'image' : 'images/blue.png',  'text' : 'Mary'},
+                    {'image' : 'images/blue.png',  'text' : 'Mary'},
+                    {'image' : 'images/green.png',  'text' : 'Mary'},
+                    {'image' : 'images/blue.png',  'text' : 'Mary'},
+                    {'image' : 'images/mary.png',  'text' : 'Mary'},
+                    {'image' : 'images/mary.png',  'text' : 'Mary'},
+                    {'image' : 'images/mary.png',  'text' : 'Mary'},
+                    {'image' : 'images/mary.png',  'text' : 'Mary'}
+                ],
+                'animation' :
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 5,
+                    'spins'    : 8,
+                }
+            });
+        
+            // Called by the onClick of the canvas, starts the spinning.
+            function startSpin()
+            {
+                // Stop any current animation.
+                theWheel.stopAnimation(false);
+        
+                // Reset the rotation angle to less than or equal to 360 so spinning again works as expected.
+                // Setting to modulus (%) 360 keeps the current position.
+                theWheel.rotationAngle = theWheel.rotationAngle % 360;
+        
+                // Start animation.
+                theWheel.startAnimation();
+            }
+        </script>
+    </body>
+</html>
