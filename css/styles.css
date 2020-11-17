@@ -1,39 +1,39 @@
 @font-face {
     font-family: 'muli_blackregular';
-    src: url('../fonts/muli-black-webfont.woff2') format('woff2'),
-    url('../fonts/muli-black-webfont.woff') format('woff');
+    src: url('/fonts/muli-black-webfont.woff2') format('woff2'),
+    url('/fonts/muli-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'muli_blackitalic';
-    src: url('../fonts/muli-blackitalic-webfont.woff2') format('woff2'),
-    url('../fonts/muli-blackitalic-webfont.woff') format('woff');
+    src: url('/fonts/muli-blackitalic-webfont.woff2') format('woff2'),
+    url('/fonts/muli-blackitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'muli_extraboldregular';
-    src: url('../fonts/muli-extrabold-webfont.woff2') format('woff2'),
-    url('../fonts/muli-extrabold-webfont.woff') format('woff');
+    src: url('/fonts/muli-extrabold-webfont.woff2') format('woff2'),
+    url('/fonts/muli-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'muliregular';
-    src: url('../fonts/muli-regular-webfont.woff2') format('woff2'),
-    url('../fonts/muli-regular-webfont.woff') format('woff');
+    src: url('/fonts/muli-regular-webfont.woff2') format('woff2'),
+    url('/fonts/muli-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'muli_semiboldregular';
-    src: url('../fonts/muli-semibold-webfont.woff2') format('woff2'),
-    url('../fonts/muli-semibold-webfont.woff') format('woff');
+    src: url('/fonts/muli-semibold-webfont.woff2') format('woff2'),
+    url('/fonts/muli-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -45,7 +45,7 @@ body {
     color: #fff;
 }
 button {
-    background: url("../images/CTA.png") no-repeat;
+    background: url("/images/CTA.png") no-repeat;
     background-size: contain;
 }
 
@@ -59,8 +59,8 @@ button {
     }
 }
 
-.container-fluid {
-    background-image: url("../images/fond-forme2-points.png"), url("../images/fond-forme1-rond.png"), url("../images/fond-forme2-points.png");
+.app {
+    background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");
     background-repeat: no-repeat;
     background-position: 10% bottom, 15% 25%, top -1% right 30%;
     background-size: auto 300px, 200px, 201px 333px
@@ -68,16 +68,16 @@ button {
 
 .wheel-container {
     width: 100%;
-    height: 500px;
-    background-image: url("/images/roue-socle.png"), url("../images/roue-top.png");
+    height: 575px;
+    background-image: url("/images/roue-socle.png"), url("/images/roue-top.png");
     background-repeat: no-repeat;
-    background-position: center bottom -30px, center top -10px;
+    background-position: center bottom -20px, center top 12px;
     background-size: contain, 150px;
 }
 
 #pointer {
     width: 40px;
-    top: 45px;
+    top: 72px;
     left: 46%;
 }
 

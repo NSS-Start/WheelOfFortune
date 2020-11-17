@@ -28,66 +28,77 @@
 	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<div class="container-fluid app">
+<div class="container app">
 	<div class="row align-items-md-center">
-		<div class="col-md-6 text-center text-md-left d-md-flex justify-content-md-center">
+		<div class="col-md-6 text-center text-md-left d-md-flex justify-content-md-center mb-sm-5">
 			<div>
 				<h1>Prêt pour 2021 ?</h1>
 				<h5>Néo-Soft vous lit l’avenir</h5>
-				<div class="d-sm-none d-none d-md-block">
-					<button class="btn btn-lg text-light">Tourner la roue</button>
+				<div class="d-sm-none d-none d-md-block mt-5">
+					<button onclick="startSpin()" class="btn btn-lg text-light">Tourner la roue</button>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6 d-flex justify-content-center align-items-center">
-			<div class="wheel-container">
-				<canvas id="canvas">
-					Canvas not supported on this browser! Please use another one.
-				</canvas>
-			</div>
+
+		<div class="col-md-6">
+						<div class="wheel-container d-flex justify-content-center align-items-center position-relative">
+							<canvas
+								id="canvas"
+								height="400"
+								width="400"
+								data-responsiveMinWidth="180"
+								data-responsiveScaleHeight="true"
+								data-responsiveMargin="50"
+							>
+								Canvas not supported on this browser. Please use another one.
+							</canvas>
+
+							<img src="/images/roue-pointeur.png" alt="Le pointeur de la roue" id="pointer" class="position-absolute" />
+						</div>
 		</div>
-		<div class="col-md-6 d-block d-md-none text-center">
-			<button class="btn btn-lg text-light">Tourner la roue</button>
+
+		<div class="col-md-6 d-block d-md-none text-center my-5">
+			<button onclick="startSpin()" class="btn btn-lg text-light">Tourner la roue</button>
 		</div>
 	</div>
 </div>
 
 <script>
-        // The responsive parameter is the only difference needed to make a wheel responsive.
-        let theWheel = new Winwheel({
-            'numSegments': 8,
-            'responsive': true,  // This wheel is responsive!
-            'drawText': false,
-            'drawMode': 'segmentImage',
-            'segments': [
-                {'image': 'images/roue-portion1.png', 'text': 'sac'},
-                {'image': 'images/roue-portion2.png', 'text': 'video'},
-                {'image': 'images/roue-portion3.png', 'text': 'pierre'},
-                {'image': 'images/roue-portion4.png', 'text': 'tete'},
-                {'image': 'images/roue-portion5.png', 'text': 'fleur'},
-                {'image': 'images/roue-portion6.png', 'text': 'bras'},
-                {'image': 'images/roue-portion7.png', 'text': 'assiete'},
-                {'image': 'images/roue-portion8.png', 'text': 'coeur'}
-            ],
-            'animation': {
-                'type': 'spinToStop',
-                'duration': 5,
-                'spins': 8,
-            }
-        });
-
-        // Called by the onClick of the canvas, starts the spinning.
-        function startSpin() {
-            // Stop any current animation.
-            theWheel.stopAnimation(false);
-
-            // Reset the rotation angle to less than or equal to 360 so spinning again works as expected.
-            // Setting to modulus (%) 360 keeps the current position.
-            theWheel.rotationAngle = theWheel.rotationAngle % 360;
-
-            // Start animation.
-            theWheel.startAnimation();
+    // The responsive parameter is the only difference needed to make a wheel responsive.
+    let theWheel = new Winwheel({
+        'numSegments': 8,
+        'responsive': true,  // This wheel is responsive!
+        'drawText': false,
+        'drawMode': 'segmentImage',
+        'segments': [
+            {'image': 'images/roue-portion1.png', 'text': 'sac'},
+            {'image': 'images/roue-portion2.png', 'text': 'video'},
+            {'image': 'images/roue-portion3.png', 'text': 'pierre'},
+            {'image': 'images/roue-portion4.png', 'text': 'tete'},
+            {'image': 'images/roue-portion5.png', 'text': 'fleur'},
+            {'image': 'images/roue-portion6.png', 'text': 'bras'},
+            {'image': 'images/roue-portion7.png', 'text': 'assiete'},
+            {'image': 'images/roue-portion8.png', 'text': 'coeur'}
+        ],
+        'animation': {
+            'type': 'spinToStop',
+            'duration': 5,
+            'spins': 8,
         }
-    </script>
+    });
+
+    // Called by the onClick of the canvas, starts the spinning.
+    function startSpin() {
+        // Stop any current animation.
+        theWheel.stopAnimation(false);
+
+        // Reset the rotation angle to less than or equal to 360 so spinning again works as expected.
+        // Setting to modulus (%) 360 keeps the current position.
+        theWheel.rotationAngle = theWheel.rotationAngle % 360;
+
+        // Start animation.
+        theWheel.startAnimation();
+    }
+</script>
 </body>
 </html>
