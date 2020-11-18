@@ -49,6 +49,8 @@ button {
     background-size: contain;
     font-family: muli_blackitalic, sans-serif;
 }
+.btn:focus {
+    box-shadow: none;
 }
 
 .app {
