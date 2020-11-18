@@ -47,6 +47,8 @@ body {
 button {
     background: url("/images/CTA.png") no-repeat;
     background-size: contain;
+    font-family: muli_blackitalic, sans-serif;
+}
 }
 
 .app {
