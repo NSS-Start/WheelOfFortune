@@ -85,6 +85,23 @@ button {
     left: 46%;
 }
 
+.modal-content {
+    border-radius: 49px;
+    padding: 1rem;
+}
+
+#welcome-popup .modal-content {
+    background-color: #1685d0;
+}
+
+.modal-body {
+    background: url("/images/fond-rayons.png") no-repeat center;
+    background-size: cover;
+    padding: 0;
+    border-radius: 49px;
+    height: 600px;
+}
+
 .bling-bling {
     -webkit-animation: bling 10s infinite;
     animation: bling 10s infinite;

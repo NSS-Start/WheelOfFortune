@@ -63,9 +63,26 @@
 	</div>
 </div>
 
+<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body text-center">
+				<div class="d-flex justify-content-center align-items-center h-100">
+					<div class="p-3">
+						<div class="h1 font-weight-bold mb-5">Néo-Soft vous souhaite une excellente <br>année 2021 !</div>
+						<p class="h3 mb-5">Tournez la roue et découvrez ce que cette nouvelle année <br>vous réserve...</p>
+						<div class="p-3">
+							<button onclick="hideWelcomePopup()" class="btn btn-block btn-lg text-light" style="background-position: center">Commencer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
     // The responsive parameter is the only difference needed to make a wheel responsive.
-    let theWheel = new Winwheel({
+    const theWheel = new Winwheel({
         'numSegments': 8,
         'responsive': true,  // This wheel is responsive!
         'drawText': false,
@@ -99,6 +116,19 @@
         // Start animation.
         theWheel.startAnimation();
     }
+</script>
+
+<script>
+	window.onload = showWelcomePopup;
+
+	function showWelcomePopup() {
+			$('#welcome-popup').modal('show');
+  }
+
+  function hideWelcomePopup() {
+	    $('#welcome-popup').modal('hide');
+	}
+
 </script>
 </body>
 </html>
