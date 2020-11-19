@@ -28,7 +28,32 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body>
+<body class="position-relative" style="overflow-x: hidden">
+<!-- RIGHT HIDDEN STAR-->
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: -40px; top: 50%"/>
+
+<!-- TOP RIGHT STARS -->
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 22rem; top: 5rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 15rem; top: 15rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 17rem; top: 15px"/>
+
+<!-- RIGHT BOTTOM STARS -->
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 16rem; bottom: 12rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 15rem; bottom: 9rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 19rem; bottom: 8rem"/>
+
+<!-- LEFT BOTTOM STARS -->
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="left: 45rem; bottom: 16rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 42rem; bottom: 8rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 50rem; bottom: 11rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 19rem; bottom: 8rem"/>
+
+<!-- TOP LEFT STARS -->
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="left: 20rem; top: 5rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 30rem; top: 0"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="left: 50rem; top: 6rem"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 52rem; top: 8rem"/>
+
 <div class="container app">
 	<div class="row align-items-md-center">
 		<div class="col-md-6 text-center text-md-left d-md-flex justify-content-md-center mb-sm-5">
@@ -106,7 +131,7 @@
         $('#result-popup')
             .on('hidden.bs.modal', resetResultModal);
 
-        showWelcomePopup();
+        // showWelcomePopup();
     }
 
     // The responsive parameter is the only difference needed to make a wheel responsive.

@@ -72,7 +72,7 @@ button {
 .app {
     background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");
     background-repeat: no-repeat;
-    background-position: 10% bottom, 15% 25%, top -1% right 30%;
+    background-position: 10% bottom, 15% 25%, top -1% right 24%;
     background-size: auto 300px, 200px, 201px 333px
 }
 
@@ -120,31 +120,40 @@ button {
 }
 
 .bling-bling {
-    -webkit-animation: bling 10s infinite;
-    animation: bling 10s infinite;
+    position: absolute;
+    -webkit-animation: bling .5s ease infinite;
+    animation: bling .5s ease infinite;
+}
+
+.bigger {
+    width: 45px;
+}
+
+.smaller {
+    width: 25px;
 }
 
 @-webkit-keyframes bling {
-    0% {
-        opacity: 1;
+    from {
+        transform: scale(1);
     }
-    2% {
-        opacity: 0.3;
+    50% {
+        transform: scale(1.5);
     }
-    4% {
-        opacity: 1;
+    to {
+        transform: scale(1);
     }
 }
 
 @keyframes bling {
-    0% {
-        opacity: 1;
+    from {
+        transform: scale(1);
     }
-    2% {
-        opacity: 0.3;
+    50% {
+        transform: scale(1.5);
     }
-    4% {
-        opacity: 1;
+    to {
+        transform: scale(1);
     }
 }
 
