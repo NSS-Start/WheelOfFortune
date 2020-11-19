@@ -63,12 +63,6 @@ button {
     min-height: 100vh;
 }
 
-@media (min-width: 768px) {
-    .app > .row {
-        min-height: 100vh;
-    }
-}
-
 .app {
     background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");
     background-repeat: no-repeat;
@@ -83,6 +77,12 @@ button {
     background-repeat: no-repeat;
     background-position: center bottom -20px, center top 12px;
     background-size: contain, 150px;
+}
+
+@media (min-width: 768px) {
+    .app > .row {
+        min-height: 100vh;
+    }
 }
 
 #pointer {
