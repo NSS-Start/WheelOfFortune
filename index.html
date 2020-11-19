@@ -25,6 +25,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
 					integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 					crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
@@ -41,20 +42,20 @@
 		</div>
 
 		<div class="col-md-6">
-						<div class="wheel-container d-flex justify-content-center align-items-center position-relative">
-							<canvas
-								id="canvas"
-								height="400"
-								width="400"
-								data-responsiveMinWidth="180"
-								data-responsiveScaleHeight="true"
-								data-responsiveMargin="50"
-							>
-								Canvas not supported on this browser. Please use another one.
-							</canvas>
+			<div class="wheel-container d-flex justify-content-center align-items-center position-relative">
+				<canvas
+					id="canvas"
+					height="400"
+					width="400"
+					data-responsiveMinWidth="180"
+					data-responsiveScaleHeight="true"
+					data-responsiveMargin="50"
+				>
+					Canvas not supported on this browser. Please use another one.
+				</canvas>
 
-							<img src="/images/roue-pointeur.png" alt="Le pointeur de la roue" id="pointer" class="position-absolute" />
-						</div>
+				<img src="/images/roue-pointeur.png" alt="Le pointeur de la roue" id="pointer" class="position-absolute"/>
+			</div>
 		</div>
 
 		<div class="col-md-6 d-block d-md-none text-center my-5">
@@ -63,7 +64,8 @@
 	</div>
 </div>
 
-<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
+<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true"
+		 data-keyboard="false">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-body text-center">
@@ -87,10 +89,10 @@
 			<div class="modal-body text-center">
 				<div class="d-flex justify-content-center align-items-center h-100">
 					<div class="p-3">
-						<img src="/images/roue-centre.png"  alt="" class="mb-5 img-thumbnail"/>
+						<img src="/images/roue-centre.png" alt="" class="mb-5 img-thumbnail"/>
 						<p class="h3 mb-5">En 2021, vos tartines ne tomberont plus sur le côté confiture, promis.</p>
 						<div class="p-3">
-							<button onclick="" class="btn btn-lg text-light" style="width: 185px">Recommencer</button>
+							<button onclick="hideResultPopup()" class="btn btn-lg text-light" style="width: 185px">Recommencer</button>
 						</div>
 					</div>
 				</div>
@@ -99,6 +101,14 @@
 	</div>
 </div>
 <script>
+    window.onload = setUp;
+    function setUp() {
+        $('#result-popup')
+            .on('hidden.bs.modal', resetResultModal);
+
+        showWelcomePopup();
+    }
+
     // The responsive parameter is the only difference needed to make a wheel responsive.
     const theWheel = new Winwheel({
         'numSegments': 8,
@@ -119,6 +129,7 @@
             'type': 'spinToStop',
             'duration': 5,
             'spins': 8,
+            callbackFinished: showResultPopup
         }
     });
 
@@ -134,19 +145,34 @@
         // Start animation.
         theWheel.startAnimation();
     }
-</script>
 
-<script>
-	window.onload = showWelcomePopup;
+    function showResultPopup() {
 
-	function showWelcomePopup() {
-			$('#welcome-popup').modal('show');
-  }
+            const winSegment = theWheel.getIndicatedSegment();
+            $('#result-popup')
+                .on('show.bs.modal', _.partial(updateResultModal, winSegment))
+                .modal('show');
+    }
 
-  function hideWelcomePopup() {
-	    $('#welcome-popup').modal('hide');
-	}
+    function showWelcomePopup() {
+        $('#welcome-popup').modal('show');
+    }
 
+    function hideWelcomePopup() {
+        $('#welcome-popup').modal('hide');
+    }
+
+    function hideResultPopup() {
+				$('#result-popup').modal('hide');
+    }
+
+    function updateResultModal(segment, $event = null) {
+        $(this).find('p.h3').text(segment.text);
+		}
+
+		function resetResultModal($event = null) {
+        $(this).find('p.h3').text(null);
+    }
 </script>
 </body>
 </html>
