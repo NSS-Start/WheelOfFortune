@@ -147,3 +147,31 @@ button {
         opacity: 1;
     }
 }
+
+.bounce {
+    -webkit-animation: bounce .3s ease .5s 2;
+    animation: bounce .3s ease .5s 2;
+}
+
+@keyframes bounce {
+    from {
+        top: 72px;
+    }
+    50% {
+        top: 62px;
+    }
+    to {
+        top: 72px;
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+        top: 72px;
+    }
+    50% {
+        top: 62px;
+    }
+    to {
+        top: 72px;
+    }
+}

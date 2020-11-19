@@ -147,11 +147,14 @@
     }
 
     function showResultPopup() {
+        $('#pointer').addClass('bounce');
 
+        setTimeout(() => {
             const winSegment = theWheel.getIndicatedSegment();
             $('#result-popup')
                 .on('show.bs.modal', _.partial(updateResultModal, winSegment))
                 .modal('show');
+				}, 1500)
     }
 
     function showWelcomePopup() {
@@ -171,6 +174,8 @@
 		}
 
 		function resetResultModal($event = null) {
+        $('#pointer').removeClass('bounce');
+
         $(this).find('p.h3').text(null);
     }
 </script>
