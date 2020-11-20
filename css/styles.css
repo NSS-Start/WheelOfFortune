@@ -48,6 +48,9 @@ body {
     font-family: muliregular, "Arial Black", Gadget, sans-serif;
     color: #fff;
 }
+.app .title {
+    font-family: muli_blackregular, sans-serif;
+}
 
 button {
     background: url("/images/CTA.png") no-repeat;
