@@ -72,22 +72,25 @@ button {
 
 .wheel-container {
     width: 100%;
-    height: 575px;
-    /*background-image: url("/images/roue-socle.png"), url("/images/roue-top.png");*/
+    max-height: 800px;
     background-image: url("/images/transparent.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
 }
 
-@media (min-width: 768px) {
+.app .vh-100 {
+    height: inherit !important;
+}
+
+@media (min-width: 992px) {
     .app > .row {
         min-height: 100vh;
     }
-}
 
-.vh-100 {
-    min-width: 100vh;
+    .app .vh-100 {
+        height: 100vh !important;
+    }
 }
 
 #pointer {
