@@ -83,19 +83,9 @@ button {
     height: inherit !important;
 }
 
-@media (min-width: 992px) {
-    .app > .row {
-        min-height: 100vh;
-    }
-
-    .app .vh-100 {
-        height: 100vh !important;
-    }
-}
-
 #pointer {
     width: 40px;
-    top: 72px;
+    top: 5px;
     left: 50%;
     margin-left: -20px;
 }
@@ -173,23 +163,60 @@ button {
 
 @keyframes bounce {
     from {
-        top: 72px;
+        top: 5px;
     }
     50% {
-        top: 62px;
+        top: 0;
     }
     to {
-        top: 72px;
+        top: 5px;
     }
 }
 @-webkit-keyframes bounce {
     from {
-        top: 72px;
+        top: 5px;
     }
     50% {
-        top: 62px;
+        top: 0;
     }
     to {
+        top: 5px;
+    }
+}
+
+@media (min-width: 992px) {
+    .app > .row {
+        min-height: 100vh;
+    }
+
+    .app .vh-100 {
+        height: 100vh !important;
+    }
+
+    #pointer {
         top: 72px;
+    }
+
+    @keyframes bounce {
+        from {
+            top: 72px;
+        }
+        50% {
+            top: 62px;
+        }
+        to {
+            top: 72px;
+        }
+    }
+    @-webkit-keyframes bounce {
+        from {
+            top: 72px;
+        }
+        50% {
+            top: 62px;
+        }
+        to {
+            top: 72px;
+        }
     }
 }
