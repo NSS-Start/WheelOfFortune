@@ -200,6 +200,12 @@ button {
         top: 72px;
     }
 
+    .embed-responsive-item {
+        position: static !important;
+        height: 600px!important;
+        width: 600px!important;
+    }
+
     @keyframes bounce {
         from {
             top: 72px;
