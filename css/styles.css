@@ -45,9 +45,14 @@
 
 body {
     background: #172566;
+    background-image: url("/images/fond-halo.png"), url("/images/fond-halo.png"), url("/images/fond-halo.png"), url("/images/fond-halo.png"), url("/images/fond-halo.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: top 10% left 10%, center left 35%, bottom 10% left 25%, center left, right 15% top 10%;
     font-family: muliregular, "Arial Black", Gadget, sans-serif;
     color: #fff;
 }
+
 .app .title {
     font-family: muli_blackregular, sans-serif;
 }
@@ -175,6 +180,7 @@ button {
         top: 5px;
     }
 }
+
 @-webkit-keyframes bounce {
     from {
         top: 5px;
@@ -202,8 +208,8 @@ button {
 
     .embed-responsive-item {
         position: static !important;
-        height: 600px!important;
-        width: 600px!important;
+        height: 600px !important;
+        width: 600px !important;
     }
 
     @keyframes bounce {
