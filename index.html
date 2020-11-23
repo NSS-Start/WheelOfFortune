@@ -65,25 +65,27 @@
 		</div>
 
 		<div class="col-lg-8 vh-100 my-4 my-lg-0 d-flex align-items-center">
-			<div class="wheel-container d-flex justify-content-center align-items-center h-100 position-relative embed-responsive embed-responsive-1by1">
-				<canvas
-					id="canvas"
-					height="600"
-					width="600"
-					class="embed-responsive-item"
-					data-responsiveMinWidth="180"
-					data-responsiveScaleHeight="true"
-					data-responsiveMargin="50"
-				>
-					Canvas not supported on this browser. Please use another one.
-				</canvas>
+			<div class="wheel-container h-100 d-flex justify-content-center align-items-center">
+				<div class="wheel-embed embed-responsive embed-responsive-1by1 position-relative">
+					<canvas
+						id="canvas"
+						height="600"
+						width="600"
+						class="embed-responsive-item"
+						data-responsiveMinWidth="180"
+						data-responsiveScaleHeight="true"
+						data-responsiveMargin="50"
+					>
+						Canvas not supported on this browser. Please use another one.
+					</canvas>
 
-				<img
-					src="/images/roue-pointeur.png"
-					alt="Le pointeur de la roue"
-					id="pointer"
-					class="position-absolute img-fluid"
-				/>
+					<img
+						src="/images/roue-pointeur.png"
+						alt="Le pointeur de la roue"
+						id="pointer"
+						class="position-absolute img-fluid"
+					/>
+				</div>
 			</div>
 		</div>
 

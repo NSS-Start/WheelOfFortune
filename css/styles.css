@@ -93,7 +93,7 @@ button {
 
 #pointer {
     width: 40px;
-    top: 5px;
+    top: 8px;
     left: 50%;
     margin-left: -20px;
 }
@@ -202,36 +202,31 @@ button {
         height: 100vh !important;
     }
 
-    #pointer {
-        top: 72px;
-    }
-
-    .embed-responsive-item {
-        position: static !important;
+    .wheel-embed {
         height: 600px !important;
         width: 600px !important;
     }
 
     @keyframes bounce {
         from {
-            top: 72px;
+            top: 8px;
         }
         50% {
-            top: 62px;
+            top: 4px;
         }
         to {
-            top: 72px;
+            top: 8px;
         }
     }
     @-webkit-keyframes bounce {
         from {
-            top: 72px;
+            top: 8px;
         }
         50% {
-            top: 62px;
+            top: 4px;
         }
         to {
-            top: 72px;
+            top: 8px;
         }
     }
 }
