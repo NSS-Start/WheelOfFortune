@@ -167,8 +167,8 @@ button {
 }
 
 .bounce {
-    -webkit-animation: bounce .3s ease .5s 2;
-    animation: bounce .3s ease .5s 2;
+    -webkit-animation: bounce .2s ease 2;
+    animation: bounce .2s ease 2;
 }
 
 @keyframes bounce {
