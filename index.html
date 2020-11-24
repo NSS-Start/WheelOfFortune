@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+				integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 	<title>Happy New Year !</title>
 	<!-- Global site tag (gtag.js) — Google Analytics -->
@@ -95,17 +96,16 @@
 	</div>
 </div>
 
-<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
+<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true"
+		 data-keyboard="false">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
-			<div class="modal-body text-center">
-				<div class="d-flex justify-content-center align-items-center h-100">
-					<div class="p-3">
-						<div class="h1 font-weight-bold mb-5">Néo-Soft vous souhaite une excellente <br>année 2021 !</div>
-						<p class="lead mb-5">Tournez la roue et découvrez ce que cette nouvelle année vous réserve...</p>
-						<div class="p-4 stars-square">
-							<button onclick="hideWelcomePopup()" class="btn btn-lg text-light" style="width: 185px">Commencer</button>
-						</div>
+			<div class="modal-body shadow">
+				<div class="p-5 text-center">
+					<div class="h3 title">Néo-Soft vous souhaite une excellente année 2021 !</div>
+					<p class="lead mt-4">Tournez la roue et découvrez ce que cette nouvelle année vous réserve...</p>
+					<div class="p-4 stars-square">
+						<button onclick="hideWelcomePopup()" class="btn btn-lg text-light" style="width: 185px">Commencer</button>
 					</div>
 				</div>
 			</div>
@@ -120,11 +120,13 @@
 				<div class="d-flex justify-content-center align-items-center">
 					<div class="p-5 text-center">
 						<div class="w-25 d-inline-block">
-							<img src="/images/roue-centre.png" alt="picto" id="picto" class="img-fluid rounded-circle mx-auto" />
+							<img src="/images/roue-centre.png" alt="picto" id="picto" class="img-fluid rounded-circle mx-auto"/>
 						</div>
-						<p class="lead my-4" id="result-text">En 2021, vos tartines ne tomberont plus sur le côté confiture, promis.</p>
+						<p class="lead my-4" id="result-text">En 2021, vos tartines ne tomberont plus sur le côté confiture,
+							promis.</p>
 						<div class="p-3 stars-square">
-							<button onclick="hideResultPopup()" class="btn btn-lg text-light" style="width: 185px">Recommencer</button>
+							<button onclick="hideResultPopup()" class="btn btn-lg text-light" style="width: 185px">Recommencer
+							</button>
 						</div>
 					</div>
 				</div>
@@ -133,12 +135,19 @@
 	</div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+				integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+				crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+				crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+				integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+				crossorigin="anonymous"></script>
 
 <script>
     window.onload = setUp;
+
     function setUp() {
         $('#result-popup')
             .on('hidden.bs.modal', resetResultModal);
@@ -152,16 +161,48 @@
         'responsive': true,  // This wheel is responsive!
         'drawText': false,
         'drawMode': 'segmentImage',
-				outerRadius: 250,
+        outerRadius: 250,
         'segments': [
-            {'image': 'images/roue-portion1.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-01.png'},
-            {'image': 'images/roue-portion2.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-02.png'},
-            {'image': 'images/roue-portion3.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-03.png'},
-            {'image': 'images/roue-portion4.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-04.png'},
-            {'image': 'images/roue-portion5.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-05.png'},
-            {'image': 'images/roue-portion6.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-06.png'},
-            {'image': 'images/roue-portion7.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-07.png'},
-            {'image': 'images/roue-portion8.png', 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.', 'picto': 'picto-08.png'}
+            {
+                'image': 'images/roue-portion1.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-01.png'
+            },
+            {
+                'image': 'images/roue-portion2.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-02.png'
+            },
+            {
+                'image': 'images/roue-portion3.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-03.png'
+            },
+            {
+                'image': 'images/roue-portion4.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-04.png'
+            },
+            {
+                'image': 'images/roue-portion5.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-05.png'
+            },
+            {
+                'image': 'images/roue-portion6.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-06.png'
+            },
+            {
+                'image': 'images/roue-portion7.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-07.png'
+            },
+            {
+                'image': 'images/roue-portion8.png',
+                'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
+                'picto': 'picto-08.png'
+            }
         ],
         'animation': {
             'type': 'spinToStop',
@@ -192,7 +233,7 @@
             $('#result-popup')
                 .on('show.bs.modal', _.partial(updateResultModal, winSegment))
                 .modal('show');
-				}, 500)
+        }, 500)
     }
 
     function showWelcomePopup() {
@@ -204,7 +245,7 @@
     }
 
     function hideResultPopup() {
-				$('#result-popup').modal('hide');
+        $('#result-popup').modal('hide');
     }
 
     function updateResultModal(segment, $event = null) {
@@ -212,9 +253,9 @@
         modal.find('#picto')[0].src = '/images/' + segment.picto;
         console.log(modal.find('#picto'));
         modal.find('#result-text').text(segment.text);
-		}
+    }
 
-		function resetResultModal($event = null) {
+    function resetResultModal($event = null) {
         $('#pointer').removeClass('bounce');
 
         $(this).find('p.h3').text(null);
