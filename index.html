@@ -95,15 +95,14 @@
 	</div>
 </div>
 
-<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true"
-		 data-keyboard="false">
+<div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-body text-center">
 				<div class="d-flex justify-content-center align-items-center h-100">
 					<div class="p-3">
 						<div class="h1 font-weight-bold mb-5">Néo-Soft vous souhaite une excellente <br>année 2021 !</div>
-						<p class="h3 mb-5">Tournez la roue et découvrez ce que cette nouvelle année <br>vous réserve...</p>
+						<p class="lead mb-5">Tournez la roue et découvrez ce que cette nouvelle année vous réserve...</p>
 						<div class="p-4 stars-square">
 							<button onclick="hideWelcomePopup()" class="btn btn-lg text-light" style="width: 185px">Commencer</button>
 						</div>
@@ -117,12 +116,14 @@
 <div class="modal fade" id="result-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
-			<div class="modal-body text-center">
-				<div class="d-flex justify-content-center align-items-center h-100">
-					<div class="p-3">
-						<img src="/images/roue-centre.png" alt="" class="mb-5 img-thumbnail"/>
-						<p class="h3 mb-5">En 2021, vos tartines ne tomberont plus sur le côté confiture, promis.</p>
-						<div class="p-3">
+			<div class="modal-body shadow">
+				<div class="d-flex justify-content-center align-items-center">
+					<div class="p-5 text-center">
+						<div class="w-25 d-inline-block">
+							<img src="/images/roue-centre.png" alt="picto" id="picto" class="img-fluid rounded-circle mx-auto" />
+						</div>
+						<p class="lead my-4" id="result-text">En 2021, vos tartines ne tomberont plus sur le côté confiture, promis.</p>
+						<div class="p-3 stars-square">
 							<button onclick="hideResultPopup()" class="btn btn-lg text-light" style="width: 185px">Recommencer</button>
 						</div>
 					</div>
@@ -207,7 +208,10 @@
     }
 
     function updateResultModal(segment, $event = null) {
-        $(this).find('p.h3').text(segment.text);
+        const modal = $(this);
+        modal.find('#picto')[0].src = '/images/' + segment.picto;
+        console.log(modal.find('#picto'));
+        modal.find('#result-text').text(segment.text);
 		}
 
 		function resetResultModal($event = null) {
