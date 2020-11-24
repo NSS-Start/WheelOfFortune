@@ -121,10 +121,12 @@ button {
 }
 
 .modal-body {
-    background: url("/images/fond-rayons.png") no-repeat center;
-    background-size: cover;
     padding: 0;
     border-radius: 49px;
+}
+
+.ray-opacity {
+    opacity: .3;
 }
 
 .bling-bling {
