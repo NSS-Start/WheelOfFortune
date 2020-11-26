@@ -232,6 +232,19 @@ button {
     }
 }
 
+@-webkit-keyframes casino-bleu {
+    from {
+        background-image: url("/images/CTA-bleu-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-bleu-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-bleu-3.png");
+    }
+}
+
 .bg-violet {
     background-color: #9f64e0;
 }
@@ -242,6 +255,19 @@ button {
 }
 
 @keyframes casino-violet {
+    from {
+        background-image: url("/images/CTA-violet-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-violet-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-violet-3.png");
+    }
+}
+
+@-webkit-keyframes casino-violet {
     from {
         background-image: url("/images/CTA-violet-1.png");
     }
@@ -276,6 +302,19 @@ button {
     }
 }
 
+@-webkit-keyframes casino-bleu-clair {
+    from {
+        background-image: url("/images/CTA-bleu-clair-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-bleu-clair-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-bleu-clair-3.png");
+    }
+}
+
 .bg-orange {
     background-color: #f97d3e;
 }
@@ -286,6 +325,19 @@ button {
 }
 
 @keyframes casino-orange {
+    from {
+        background-image: url("/images/CTA-orange-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-orange-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-orange-3.png");
+    }
+}
+
+@-webkit-keyframes casino-orange {
     from {
         background-image: url("/images/CTA-orange-1.png");
     }
@@ -320,6 +372,19 @@ button {
     }
 }
 
+@-webkit-keyframes casino-rose {
+    from {
+        background-image: url("/images/CTA-rose-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-rose-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-rose-3.png");
+    }
+}
+
 .bg-menthe {
     background-color: #69c0b8;
 }
@@ -330,6 +395,19 @@ button {
 }
 
 @keyframes casino-menthe {
+    from {
+        background-image: url("/images/CTA-menthe-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-menthe-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-menthe-3.png");
+    }
+}
+
+@-webkit-keyframes casino-menthe {
     from {
         background-image: url("/images/CTA-menthe-1.png");
     }
@@ -364,6 +442,19 @@ button {
     }
 }
 
+@-webkit-keyframes casino-vert {
+    from {
+        background-image: url("/images/CTA-vert-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-vert-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-vert-3.png");
+    }
+}
+
 .bg-jaune {
     background-color: #ece313;
 }
@@ -384,6 +475,23 @@ button {
     to {
         background-image: url("/images/CTA-jaune-3.png");
     }
+}
+
+@-webkit-keyframes casino-jaune {
+    from {
+        background-image: url("/images/CTA-jaune-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-jaune-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-jaune-3.png");
+    }
+}
+
+.modal-dialog {
+    max-width: 288px;
 }
 
 @media (min-width: 992px) {

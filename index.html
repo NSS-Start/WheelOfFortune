@@ -27,38 +27,20 @@
 
 	<link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body class="position-relative" style="overflow-x: hidden">
+<body class="position-relative">
 <img src="/images/fond-rayons.png" alt="fond-rayons" id="fond-rayons"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 5%; top: 50%"/>
-
-<!-- TOP RIGHT STARS -->
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller d-none d-lg-block"
-		 style="right: 22%; top: 5%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 15%; top: 15%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger d-none d-lg-block"
-		 style="right: 17%; top: 15px"/>
-
-<!-- RIGHT BOTTOM STARS -->
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 16%; bottom: 12%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 15%; bottom: 9%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 19%; bottom: 8%"/>
-
-<!-- LEFT BOTTOM STARS -->
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="left: 45%; bottom: 16%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 42%; bottom: 8%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 50%; bottom: 11%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 19%; bottom: 8%"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger d-none d-lg-block" style="right: 5%; top: 50%"/>
 
 <!-- TOP LEFT STARS -->
 <img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger d-none d-lg-block"
 		 style="left: 20%; top: 5%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 30%; top: 0"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger d-none d-lg-block"
-		 style="left: 50%; top: 6%"/>
-<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller d-none d-lg-block"
-		 style="left: 52%; top: 8%"/>
+<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller d-none d-lg-block" style="left: 30%; top: 0"/>
 
-<div class="container app d-flex d-lg-block align-items-center justify-content-center">
+<div class="container app d-flex d-lg-block align-items-center justify-content-center position-relative">
+	<!-- LEFT BOTTOM STARS -->
+	<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 30%; bottom: 23%"/>
+	<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 19%; bottom: 8%"/>
+
 	<div class="row align-items-lg-center">
 		<div class="col-lg-4 text-center text-lg-left d-lg-flex justify-content-lg-center">
 			<div>
@@ -71,7 +53,27 @@
 		</div>
 
 		<div class="col-lg-8 vh-100 my-0 d-flex align-items-center">
-			<div class="wheel-container h-100 d-flex justify-content-center align-items-center">
+			<!-- RIGHT BOTTOM STARS -->
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 10%; bottom: 30%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 5%; bottom: 17%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 25%; bottom: 12%"/>
+
+			<!-- TOP RIGHT STARS -->
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 8%; top: 25%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="right: 35%; top: 10%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger"
+					 style="right: 17%; top: 15px"/>
+
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller" style="left: 10%; bottom: 30%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger d-none d-lg-block" style="left: 5%; bottom: 50%"/>
+
+			<!-- TOP LEFT	-->
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger"
+					 style="left: 10%; top: 20%"/>
+			<img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling smaller"
+					 style="left: 14%; top: 28%"/>
+
+			<div class="wheel-container h-100 d-flex justify-content-center align-items-center position-relative">
 				<div class="wheel-embed embed-responsive embed-responsive-1by1">
 					<canvas
 						id="canvas"
@@ -104,7 +106,7 @@
 
 <div class="modal fade" id="welcome-popup" tabindex="-1" data-backdrop="static" aria-hidden="true"
 		 data-keyboard="false">
-	<div class="modal-dialog modal-dialog-centered mx-3 mx-lg-auto">
+	<div class="modal-dialog modal-dialog-centered mx-auto">
 		<div class="modal-content">
 			<div class="modal-body shadow embed-responsive">
 				<img src="/images/fond-rayons.png" alt="rayons" class="embed-responsive-item ray-opacity"/>
@@ -121,11 +123,11 @@
 </div>
 
 <div class="modal fade" id="result-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
-	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog modal-dialog-centered mx-auto">
 		<div class="modal-content" id="modal-content">
 			<div class="modal-body shadow embed-responsive">
 				<img src="/images/fond-rayons.png" alt="rayons" class="embed-responsive-item ray-opacity"/>
-				<div class="px-4 py-2 py-lg-5 text-center position-relative">
+				<div class="px-2 px-lg-4 py-4 py-lg-5 text-center position-relative">
 					<div class="w-25 d-inline-block">
 						<img src="/images/roue-centre.png" alt="picto" id="picto" class="img-fluid rounded-circle mx-auto"/>
 					</div>
