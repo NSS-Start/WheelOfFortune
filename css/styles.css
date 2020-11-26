@@ -53,7 +53,7 @@ body {
     color: #fff;
 }
 
-#pointer, .bling-bling, #fond-rayons, #roue-centre {
+#pointer, .bling-bling, #fond-rayons, #roue-centre, .forme-rond, .forme-point-1, .forme-point-2 {
     position: absolute;
 }
 
@@ -73,14 +73,15 @@ button {
 
 .app {
     min-height: 100vh;
+    overflow: hidden;
 }
 
-.app {
-    background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");
-    background-repeat: no-repeat;
-    background-position: 10% bottom, 15% 25%, top -1% right 24%;
-    background-size: auto 300px, 200px, 201px 333px
-}
+/*.app {*/
+/*    background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: 10% bottom, 15% 25%, top -1% right 24%;*/
+/*    background-size: auto 300px, 200px, 201px 333px*/
+/*}*/
 
 .wheel-container {
     width: 100%;
@@ -494,6 +495,28 @@ button {
     max-width: 288px;
 }
 
+.forme-rond {
+    width: 200px;
+    height: auto;
+    left: 6%;
+    top: 19%;
+}
+
+.forme-point-1 {
+    left: -100px;
+    bottom: -359px;
+}
+
+.forme-point-2 {
+    right: -100px;
+    top: -355px;
+}
+
+.forme-point-1, .forme-point-2 {
+    width: 250px;
+    height: auto;
+}
+
 @media (min-width: 992px) {
     .app > .row {
         min-height: 100vh;
@@ -516,6 +539,16 @@ button {
         width: 70%;
     }
 
+    .forme-point-1 {
+        left: -5%;
+        bottom: -13%;
+    }
+
+    .forme-point-2 {
+        right: 25%;
+        top: -1%;
+    }
+
     @keyframes bounce {
         from {
             top: 8px;
@@ -527,6 +560,7 @@ button {
             top: 8px;
         }
     }
+
     @-webkit-keyframes bounce {
         from {
             top: 8px;
