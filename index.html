@@ -65,7 +65,7 @@
 				<h1 class="title">Prêt pour 2021 ?</h1>
 				<h5>Néo-Soft vous lit l’avenir</h5>
 				<div class="d-sm-none d-none d-lg-block mt-5">
-					<button onclick="startSpin()" class="btn btn-lg text-light">Tourner la roue</button>
+					<button onclick="startSpin()" class="btn btn-lg text-light cta-bleu">Tourner la roue</button>
 				</div>
 			</div>
 		</div>
@@ -97,7 +97,7 @@
 		</div>
 
 		<div class="col-lg-6 d-block d-lg-none text-center">
-			<button onclick="startSpin()" class="btn btn-lg text-light">Tourner la roue</button>
+			<button onclick="startSpin()" class="btn btn-lg text-light cta-bleu">Tourner la roue</button>
 		</div>
 	</div>
 </div>
@@ -112,7 +112,7 @@
 					<h5 class="modal-title">Néo-Soft vous souhaite une excellente année 2021 !</h5>
 					<p class="lead mt-4">Tournez la roue et découvrez ce que cette nouvelle année vous réserve...</p>
 					<div class="p-4 stars-square">
-						<button onclick="hideWelcomePopup()" class="btn btn-lg text-light">&nbsp;&nbsp;&nbsp;Commencer&nbsp;&nbsp;&nbsp;</button>
+						<button onclick="hideWelcomePopup()" class="btn btn-lg text-light cta-bleu">&nbsp;&nbsp;&nbsp;Commencer&nbsp;&nbsp;&nbsp;</button>
 					</div>
 				</div>
 			</div>
@@ -172,13 +172,13 @@
         'segments': [
             {
                 'image': 'images/roue-portion1.png',
-                'color': {name: 'bleu', value: '#9f64e0'},
+                'color': {name: 'violet', value: '#9f64e0'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-01.png'
             },
             {
                 'image': 'images/roue-portion2.png',
-                'color': {name: 'violet', value: '#9f64e0'},
+                'color': {name: 'bleu', value: '#172566'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-02.png'
             },
@@ -268,6 +268,7 @@
         modal.find('.modal-content').addClass(`bg-${segment.color.name}`)
         modal.find('#picto').attr('src', '/images/' + segment.picto);
         modal.find('#result-text').text(segment.text);
+        modal.find('button').addClass(`cta-${segment.color.name}`)
     }
 
     function resetResultModal($event = null) {
@@ -275,8 +276,8 @@
 
         const modal = $(this);
         modal.find('p.h3').text(null);
-        modal.find('#modal-content').removeClass();
-        modal.find('#modal-content').addClass('modal-content');
+        modal.find('#modal-content').removeClass().addClass('modal-content');
+        modal.find('button').removeClass().addClass(`btn btn-lg text-light`)
     }
 </script>
 </body>

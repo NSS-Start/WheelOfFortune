@@ -62,7 +62,7 @@ body {
 }
 
 button {
-    background: url("/images/CTA.png") no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     font-family: muli_blackitalic, sans-serif;
 }
@@ -214,32 +214,176 @@ button {
     background-color: #172566;
 }
 
+.cta-bleu {
+    background-image: url("/images/CTA-bleu-1.png");
+    animation: casino-bleu 1s infinite;
+}
+
+@keyframes casino-bleu {
+    from {
+        background-image: url("/images/CTA-bleu-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-bleu-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-bleu-3.png");
+    }
+}
+
 .bg-violet {
     background-color: #9f64e0;
+}
+
+.cta-violet {
+    background-image: url("/images/CTA-violet-1.png");
+    animation: casino-violet 1s infinite;
+}
+
+@keyframes casino-violet {
+    from {
+        background-image: url("/images/CTA-violet-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-violet-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-violet-3.png");
+    }
 }
 
 .bg-bleu-clair {
     background-color: #20a1db;
 }
 
+.cta-bleu-clair {
+    background-image: url("/images/CTA-bleu-clair-1.png");
+    animation: casino-bleu-clair 1s infinite;
+}
+
+@keyframes casino-bleu-clair {
+    from {
+        background-image: url("/images/CTA-bleu-clair-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-bleu-clair-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-bleu-clair-3.png");
+    }
+}
+
 .bg-orange {
     background-color: #f97d3e;
+}
+
+.cta-orange {
+    background-image: url("/images/CTA-orange-1.png");
+    animation: casino-orange 1s infinite;
+}
+
+@keyframes casino-orange {
+    from {
+        background-image: url("/images/CTA-orange-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-orange-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-orange-3.png");
+    }
 }
 
 .bg-rose {
     background-color: #e596b3;
 }
 
+.cta-rose {
+    background-image: url("/images/CTA-rose-1.png");
+    animation: casino-rose 1s infinite;
+}
+
+@keyframes casino-rose {
+    from {
+        background-image: url("/images/CTA-rose-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-rose-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-rose-3.png");
+    }
+}
+
 .bg-menthe {
     background-color: #69c0b8;
+}
+
+.cta-menthe {
+    background-image: url("/images/CTA-menthe-1.png");
+    animation: casino-menthe 1s infinite;
+}
+
+@keyframes casino-menthe {
+    from {
+        background-image: url("/images/CTA-menthe-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-menthe-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-menthe-3.png");
+    }
 }
 
 .bg-vert {
     background-color: #50b16c;
 }
 
+.cta-vert {
+    background-image: url("/images/CTA-vert-1.png");
+    animation: casino-vert 1s infinite;
+}
+
+@keyframes casino-vert {
+    from {
+        background-image: url("/images/CTA-vert-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-vert-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-vert-3.png");
+    }
+}
+
 .bg-jaune {
     background-color: #ece313;
+}
+
+.cta-jaune {
+    background-image: url("/images/CTA-jaune-1.png");
+    animation: casino-jaune 1s infinite;
+}
+
+@keyframes casino-jaune {
+    from {
+        background-image: url("/images/CTA-jaune-1.png");
+    }
+
+    50% {
+        background-image: url("/images/CTA-jaune-2.png");
+    }
+    to {
+        background-image: url("/images/CTA-jaune-3.png");
+    }
 }
 
 @media (min-width: 992px) {
