@@ -148,15 +148,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 				crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
-				integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
-				crossorigin="anonymous"></script>
 
 <script>
     window.onload = setUp;
 
     function setUp() {
         $('#result-popup')
+            .on('show.bs.modal', updateResultModal)
             .on('hidden.bs.modal', resetResultModal);
 
         showWelcomePopup();
@@ -172,49 +170,49 @@
         'segments': [
             {
                 'image': 'images/roue-portion1.png',
-                'color': {name: 'violet', value: '#9f64e0'},
+                'color': 'violet',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-01.png'
             },
             {
                 'image': 'images/roue-portion2.png',
-                'color': {name: 'bleu', value: '#172566'},
+                'color': 'bleu',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-02.png'
             },
             {
                 'image': 'images/roue-portion3.png',
-                'color': {name: 'bleu-clair', value: '#20a1db'},
+                'color': 'bleu-clair',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-03.png'
             },
             {
                 'image': 'images/roue-portion4.png',
-                'color': {name: 'menthe', value: '#69c0b8'},
+                'color': 'menthe',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-04.png'
             },
             {
                 'image': 'images/roue-portion5.png',
-                'color': {name: 'vert', value: '#50b16c'},
+                'color': 'vert',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-05.png'
             },
             {
                 'image': 'images/roue-portion6.png',
-                'color': {name: 'jaune', value: '#ece313'},
+                'color': 'jaune',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-06.png'
             },
             {
                 'image': 'images/roue-portion7.png',
-                'color': {name: 'orange', value: '#f97d3e'},
+                'color': 'orange',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-07.png'
             },
             {
                 'image': 'images/roue-portion8.png',
-                'color': {name: 'rose', value: '#e596b3'},
+                'color': 'rose',
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-08.png'
             }
@@ -242,12 +240,9 @@
 
     function showResultPopup() {
         $('#pointer').addClass('bounce');
-
         setTimeout(() => {
-            const winSegment = theWheel.getIndicatedSegment();
             $('#result-popup')
-                .on('show.bs.modal', _.partial(updateResultModal, winSegment))
-                .modal('show');
+        				.modal('show');
         }, 500)
     }
 
@@ -263,21 +258,26 @@
         $('#result-popup').modal('hide');
     }
 
-    function updateResultModal(segment, $event = null) {
+    function updateResultModal() {
         const modal = $(this);
-        modal.find('.modal-content').addClass(`bg-${segment.color.name}`)
+        const segment = theWheel.getIndicatedSegment();
+
+        modal.find('.modal-content').addClass(`bg-${segment.color}`)
         modal.find('#picto').attr('src', '/images/' + segment.picto);
         modal.find('#result-text').text(segment.text);
-        modal.find('button').addClass(`cta-${segment.color.name}`)
+        modal.find('button').addClass(`cta-${segment.color}`)
     }
 
-    function resetResultModal($event = null) {
+    function resetResultModal() {
         $('#pointer').removeClass('bounce');
 
         const modal = $(this);
+        const segment = theWheel.getIndicatedSegment();
+
         modal.find('p.h3').text(null);
-        modal.find('#modal-content').removeClass().addClass('modal-content');
-        modal.find('button').removeClass().addClass(`btn btn-lg text-light`)
+        modal.find('#modal-content').removeClass(`bg-${segment.color}`);
+        modal.find('button').removeClass(`cta-${segment.color}`);
+        // segment = null;
     }
 </script>
 </body>
