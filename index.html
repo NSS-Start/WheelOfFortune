@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body class="position-relative" style="overflow-x: hidden">
-<img src="/images/fond-rayons.png" alt="fond-rayons" id="fond-rayons" />
+<img src="/images/fond-rayons.png" alt="fond-rayons" id="fond-rayons"/>
 <img src="/images/fond-etoile-petite.png" alt="star" class="bling-bling bigger" style="right: 5%; top: 50%"/>
 
 <!-- TOP RIGHT STARS -->
@@ -91,7 +91,7 @@
 						alt="Le pointeur de la roue"
 						id="pointer"
 					/>
-					<img src="/images/roue-centre.png" alt="roue-centre" id="roue-centre" />
+					<img src="/images/roue-centre.png" alt="roue-centre" id="roue-centre"/>
 				</div>
 			</div>
 		</div>
@@ -122,7 +122,7 @@
 
 <div class="modal fade" id="result-popup" tabindex="-1" data-backdrop="static" aria-hidden="true" data-keyboard="false">
 	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
+		<div class="modal-content" id="modal-content">
 			<div class="modal-body shadow embed-responsive">
 				<img src="/images/fond-rayons.png" alt="rayons" class="embed-responsive-item ray-opacity"/>
 				<div class="px-4 py-2 py-lg-5 text-center position-relative">
@@ -132,7 +132,9 @@
 					<p class="lead my-4" id="result-text">En 2021, vos tartines ne tomberont plus sur le côté confiture,
 						promis.</p>
 					<div class="p-3 stars-square">
-						<button onclick="hideResultPopup()" class="btn btn-lg text-light">&nbsp;&nbsp;Recommencer&nbsp;&nbsp;</button>
+						<button
+							onclick="hideResultPopup()"
+							class="btn btn-lg text-light">&nbsp;&nbsp;Recommencer&nbsp;&nbsp;</button>
 					</div>
 				</div>
 			</div>
@@ -170,41 +172,49 @@
         'segments': [
             {
                 'image': 'images/roue-portion1.png',
+                'color': {name: 'bleu', value: '#9f64e0'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-01.png'
             },
             {
                 'image': 'images/roue-portion2.png',
+                'color': {name: 'violet', value: '#9f64e0'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-02.png'
             },
             {
                 'image': 'images/roue-portion3.png',
+                'color': {name: 'bleu-clair', value: '#20a1db'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-03.png'
             },
             {
                 'image': 'images/roue-portion4.png',
+                'color': {name: 'menthe', value: '#69c0b8'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-04.png'
             },
             {
                 'image': 'images/roue-portion5.png',
+                'color': {name: 'vert', value: '#50b16c'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-05.png'
             },
             {
                 'image': 'images/roue-portion6.png',
+                'color': {name: 'jaune', value: '#ece313'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-06.png'
             },
             {
                 'image': 'images/roue-portion7.png',
+                'color': {name: 'orange', value: '#f97d3e'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-07.png'
             },
             {
                 'image': 'images/roue-portion8.png',
+                'color': {name: 'rose', value: '#e596b3'},
                 'text': 'La richesse vous sourit : vous gagnerez plus de 2€ à votre ticket à gratter.',
                 'picto': 'picto-08.png'
             }
@@ -255,15 +265,18 @@
 
     function updateResultModal(segment, $event = null) {
         const modal = $(this);
-        modal.find('#picto')[0].src = '/images/' + segment.picto;
-        console.log(modal.find('#picto'));
+        modal.find('.modal-content').addClass(`bg-${segment.color.name}`)
+        modal.find('#picto').attr('src', '/images/' + segment.picto);
         modal.find('#result-text').text(segment.text);
     }
 
     function resetResultModal($event = null) {
         $('#pointer').removeClass('bounce');
 
-        $(this).find('p.h3').text(null);
+        const modal = $(this);
+        modal.find('p.h3').text(null);
+        modal.find('#modal-content').removeClass();
+        modal.find('#modal-content').addClass('modal-content');
     }
 </script>
 </body>
