@@ -4,7 +4,6 @@
     url('/fonts/muli-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -13,7 +12,6 @@
     url('/fonts/muli-blackitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -22,7 +20,6 @@
     url('/fonts/muli-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -31,7 +28,6 @@
     url('/fonts/muli-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -40,7 +36,6 @@
     url('/fonts/muli-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -72,16 +67,9 @@ button {
 }
 
 .app {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     overflow: hidden;
 }
-
-/*.app {*/
-/*    background-image: url("/images/fond-forme2-points.png"), url("/images/fond-forme1-rond.png"), url("/images/fond-forme2-points.png");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: 10% bottom, 15% 25%, top -1% right 24%;*/
-/*    background-size: auto 300px, 200px, 201px 333px*/
-/*}*/
 
 .wheel-container {
     width: 100%;
@@ -522,7 +510,7 @@ button {
         min-height: 100vh;
     }
 
-    .app .vh-100 {
+    .app {
         height: 100vh !important;
     }
 
