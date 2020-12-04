@@ -126,7 +126,7 @@ button {
     border-radius: 49px;
 }
 
-.ray-opacity, #fond-rayons {
+.o-50, #fond-rayons {
     opacity: .5;
 }
 
@@ -499,7 +499,7 @@ button {
     width: 200px;
     height: auto;
     left: 6%;
-    top: 19%;
+    top: 17%;
 }
 
 .forme-point-1 {
