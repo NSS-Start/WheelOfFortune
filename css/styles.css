@@ -445,7 +445,7 @@ button {
 }
 
 .bg-jaune {
-    background-color: #ece313;
+    background-color: #f2cd02;
 }
 
 .cta-jaune {
@@ -510,7 +510,7 @@ button {
         min-height: 100vh;
     }
 
-    .app {
+    .app .vh-100 {
         height: 100vh !important;
     }
 
